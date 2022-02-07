@@ -1,5 +1,3 @@
-from tempfile import template
-from tkinter import Entry
 from django.shortcuts import render
 from django.http import HttpResponse
 from math import floor
@@ -196,7 +194,6 @@ def emailsender(request):
 
 
     events = NetworkEvents.objects.all()
-    print(events)
 
     from email.message import EmailMessage
     msg = EmailMessage()
