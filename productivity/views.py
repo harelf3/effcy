@@ -42,7 +42,7 @@ def knowledge(request):
     else:
         form = DataForm()
         knowledge = Data.objects.all()
-        lenknowledge = 3
+        lenknowledge = len(knowledge)
         level = floor(lenknowledge/10)
     return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
 
