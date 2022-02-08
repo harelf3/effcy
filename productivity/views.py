@@ -34,7 +34,7 @@ def knowledge(request):
             # redirect to a new URL:
             form = DataForm()
             knowledge = Data.objects.all()
-            lenknowledge = 50
+            lenknowledge = len(knowledge)
             level = floor(lenknowledge/10)
             return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
 
@@ -42,7 +42,7 @@ def knowledge(request):
     else:
         form = DataForm()
         knowledge = Data.objects.all()
-        lenknowledge = len(knowledge)
+        lenknowledge = 3
         level = floor(lenknowledge/10)
     return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
 
