@@ -174,8 +174,9 @@ def emailsender(request):
         if network :
             connections_info  = connections_info + "<h2>"+ str(field) +"</h2>" 
         if field == "all":
-            connections_info = connections_info +"<br>"+ "<h2>All Connections</h2>"
-            network = Connections.objects.all()
+            if network :
+                connections_info = connections_info +"<br>"+ "<h2>All Connections</h2>"
+                network = Connections.objects.all()
         for person in network:
                 connections_info = connections_info +str(person.full_name) + " "
                 connections_info = connections_info + str(person.title) +" "
