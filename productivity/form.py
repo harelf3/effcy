@@ -25,7 +25,7 @@ event_type=(
 class DataForm(forms.Form):
     subjects = forms.ChoiceField(choices = subjects)
     entry_type = forms.ChoiceField(choices = entry_type)
-    url = forms.URLField(label='url', max_length=100)
+    url = forms.CharField(label='url', max_length=100)
     desc = forms.CharField(label='desc', max_length=100)
     importance =forms.IntegerField(label='value',widget=forms.TextInput(attrs={'placeholder': 'importance'}), max_value=10)
 

@@ -37,14 +37,19 @@ def knowledge(request):
             lenknowledge = len(knowledge)
             level = floor(lenknowledge/10)
             return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
-
+        else:
+            form = DataForm()
+            knowledge = Data.objects.all()
+            lenknowledge = len(knowledge)
+            level = floor(lenknowledge/10)
     # if a GET (or any other method) we'll create a blank form
     else:
         form = DataForm()
         knowledge = Data.objects.all()
         lenknowledge = len(knowledge)
         level = floor(lenknowledge/10)
-        return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
+    
+    return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
 
 
 def network(request):
