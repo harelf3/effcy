@@ -44,7 +44,7 @@ def knowledge(request):
         knowledge = Data.objects.all()
         lenknowledge = len(knowledge)
         level = floor(lenknowledge/10)
-    return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
+        return render(request, 'productivity/knowledge.html', {'form': form,'knowledge':lenknowledge,'level':level})
 
 
 def network(request):
