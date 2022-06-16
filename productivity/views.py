@@ -158,7 +158,7 @@ def emailsender(request):
     smtp_server = "smtp.gmail.com"
     sender_email = "bikurofepy@gmail.com"  # Enter your address
     receiver_email = "alonlalon123@gmail.com"  # Enter receiver address
-    password = "H98yx-55hz90"
+    password = ""
 
     knowledge_info = """<h1>KnowLedge</h1>\n"""
     for subj in ["business","startups","managment","ai","biohacking"]:
